@@ -29,21 +29,25 @@ class LeadAPIHandler:
         	latitude=data['latitude'],
         	longitude=data['longitude'],
         	temperature=data['temperature'],
-        	interest=data['interest']
-    	)
+        	interest=data['interest'],
+			email=data['email'],
+			telefone=data['telefone']
+		)
 		return jsonify({"message": "Lead criado com sucesso!"}), 201
 
 	# Atualiza um lead existente
 	def update_lead(self, id):
 		data = request.json
-		self.lead_service.update_lead(
+		self.lead_service.update_lead( 
         	lead_id=id,
         	name=data['name'],
         	latitude=data['latitude'],
         	longitude=data['longitude'],
         	temperature=data['temperature'],
-        	interest=data['interest']
-    	)
+        	interest=data['interest'],
+			email=data['email'],
+			telefone=data['telefone']	
+			)
 		return jsonify({"message": "Lead atualizado com sucesso!"})
 
 	# Deleta um lead
