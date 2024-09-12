@@ -12,6 +12,8 @@ def generate_leads():
 		longitude = random.uniform(-180, 180)
 		temperature = random.uniform(10, 40)
 		interest = random.choice(interests)
-		lead = Lead(name, latitude, longitude, temperature, interest)
+		email = "email@email.com"
+		telefone = random.uniform(90000000, 99999999)
+		lead = Lead(name, latitude, longitude, temperature, interest, email, telefone)
 		db.session.add(lead)
 		db.session.commit()

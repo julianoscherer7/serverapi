@@ -12,6 +12,7 @@ db_connection = DatabaseConnection(app)
 db_connection.initialize_db(app)
 
 
+
 # Inicializando a API com as rotas
 api_handler = LeadAPIHandler(app, db_connection.get_db())
 
